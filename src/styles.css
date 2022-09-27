@@ -1,0 +1,172 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'reset-css';
+
+* {
+  /*font-size: 100%;*/
+  font-family: 'Arial Black';
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin: 1em 0;
+  font-weight: bold;
+}
+h2 {
+  display: block;
+  font-size:24px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #1C6758;
+}
+
+
+.menu {
+  background-color: #EEF2E6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  /*padding-bottom: 68px;*/
+}
+.menu-body {
+  flex: 1;
+  max-height: 330px;
+  overflow: scroll;
+  padding-right: 17px;
+}
+.menu-header {
+  margin: 3px;
+}
+
+.menu-item, .order-body-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: 3px solid #3D8361;
+  border-radius: 30px;
+}
+
+.menu-item-img, order-body-item-img {
+}
+
+.menu-item-description {
+  flex: 1;
+  padding: 10px;
+}
+
+.menu-item-price, .order-body-item-quantity {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-item-add-quantity-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.menu-item-add {
+}
+
+
+
+.menu-item-quantity {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #3D8361;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+.menu-item-quantity-number, .menu-item-quantity-decrease, .menu-item-quantity-increase {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item-quantity-decrease {
+  background-color: #D6CDA4;
+}
+
+.menu-item-quantity-decrease:hover {
+  background-color: #967E76;
+  cursor: pointer;
+}
+
+.menu-item-quantity-number {
+  flex: 1;
+  align-items: center;
+  border-left: 2px solid #3D8361;
+  border-right: 2px solid #3D8361;
+  text-align: center;
+}
+
+.menu-item-quantity-increase {
+  background-color: #D6CDA4;
+}
+
+.menu-item-quantity-increase:hover {
+  background-color: #967E76;
+  cursor: pointer;
+}
+
+.order {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #D6CDA4;
+  border-radius: 30px;
+  padding-bottom: 68px;
+}
+
+.order-header {
+  margin: 3px;
+}
+
+.order-body {
+  flex: 1;
+  max-height: 330px;
+  overflow: scroll;
+  padding-right: 17px;
+}
+
+
+.order-body-item-name {
+  flex: 1;
+  align-self: center;
+
+}
+
+.order-body-item-remove {
+  align-self: center;
+}
+.order-body-item-remove:hover {
+  cursor: pointer;
+}
+
+.order-total-price {
+  position: absolute;
+  bottom: 5px;
+  right: 22px;
+  /*align-self: flex-end;*/
+  /*margin: 5px;*/
+  display: flex;
+  border: 3px solid #3D8361;
+  border-radius: 30px;
+}
+
+.order-total-price-text {
+  padding: 20px;
+}
+
+.order-total-price-sum {
+  padding: 20px;
+}
