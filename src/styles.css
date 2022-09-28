@@ -3,7 +3,6 @@
 @import 'reset-css';
 
 * {
-  /*font-size: 100%;*/
   font-family: 'Arial Black';
 }
 
@@ -24,22 +23,21 @@ h2 {
 .menu-wrap {
   height: 100vh;
 }
+
 .menu {
   background-color: #EEF2E6;
   position: relative;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-between;*/
   border-radius: 30px;
   padding-bottom: 10px;
 }
+
 .menu-body {
-  flex: 1;
-  /*max-height: 443px;*/
   overflow-y: scroll;
   padding-right: 17px;
-  /*border: 1px solid black;*/
 }
+
 .menu-header {
   margin: 3px;
 }
@@ -76,8 +74,6 @@ h2 {
 
 .menu-item-add {
 }
-
-
 
 .menu-item-quantity {
   display: flex;
@@ -136,16 +132,14 @@ h2 {
 
 .order-body {
   flex: 1;
-  max-height: 344px;
   overflow-y: auto;
   padding-right: 17px;
+  margin-bottom: 10px;
 }
-
 
 .order-body-item-name {
   flex: 1;
   align-self: center;
-
 }
 
 .order-body-item-remove {
@@ -159,8 +153,6 @@ h2 {
   position: absolute;
   bottom: 5px;
   right: 22px;
-  /*align-self: flex-end;*/
-  /*margin: 5px;*/
   display: flex;
   border: 3px solid #3D8361;
   border-radius: 30px;
