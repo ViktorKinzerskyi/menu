@@ -1,0 +1,38 @@
+<!--        menu list item-->
+<div class="menu-item">
+  <!--          img-->
+  <div class="menu-item-img">
+    <img [src]="menuItem.imgPath">
+  </div>
+  <!--          menu description-->
+  <div class="menu-item-description">
+    <span>{{ menuItem.name }}</span><br><span>{{ menuItem.description }}</span>
+  </div>
+  <!--          price-->
+  <div class="menu-item-price">
+    <span>5$</span>
+  </div>
+
+  <!--              add and quantity block-->
+  <div class="menu-item-add-quantity-block">
+    <!--                quantity-->
+    <div class="menu-item-quantity">
+      <div class="menu-item-quantity-decrease">
+        -
+      </div>
+      <div class="menu-item-quantity-number">
+        1
+      </div>
+      <div class="menu-item-quantity-increase">
+        +
+      </div>
+    </div>
+    <!--          add button-->
+    <div class="menu-item-add">
+      <button class="btn btn-success">Add</button>
+    </div>
+
+  </div>
+
+
+</div>

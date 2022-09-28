@@ -1,0 +1,16 @@
+<div class="menu-wrap menu">
+<div class="menu-header">
+    <h2 class="text-center text-uppercase text-decoration-underline">Menu</h2>
+  </div>
+
+  <!--  menu list-->
+  <div class="menu-body">
+    <ul >
+      <!--        menu list item-->
+      <li *ngFor="let menuItem of menuItems">
+        <app-menu-item
+        [menuItem]="menuItem"></app-menu-item>
+      </li>
+    </ul>
+  </div>
+</div>
