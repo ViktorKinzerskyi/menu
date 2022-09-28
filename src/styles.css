@@ -21,21 +21,24 @@ h2 {
   color: #1C6758;
 }
 
-
+.menu-wrap {
+  height: 100vh;
+}
 .menu {
   background-color: #EEF2E6;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   border-radius: 30px;
-  /*padding-bottom: 68px;*/
+  padding-bottom: 10px;
 }
 .menu-body {
   flex: 1;
-  max-height: 330px;
-  overflow: scroll;
+  /*max-height: 443px;*/
+  overflow-y: scroll;
   padding-right: 17px;
+  /*border: 1px solid black;*/
 }
 .menu-header {
   margin: 3px;
@@ -121,7 +124,7 @@ h2 {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   background-color: #D6CDA4;
   border-radius: 30px;
   padding-bottom: 68px;
@@ -133,8 +136,8 @@ h2 {
 
 .order-body {
   flex: 1;
-  max-height: 330px;
-  overflow: scroll;
+  max-height: 344px;
+  overflow-y: auto;
   padding-right: 17px;
 }
 
