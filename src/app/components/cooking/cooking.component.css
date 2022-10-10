@@ -1,0 +1,18 @@
+.cooking-wrap {
+  height: 100vh;
+}
+.cooking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.cooking-body {
+  overflow-y: auto;
+  padding-right: 17px;
+}
+
+.cooking-header {
+  margin: 3px;
+}

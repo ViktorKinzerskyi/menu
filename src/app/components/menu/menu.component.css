@@ -9,7 +9,7 @@
 }
 
 .menu-body {
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-right: 17px;
 }
 

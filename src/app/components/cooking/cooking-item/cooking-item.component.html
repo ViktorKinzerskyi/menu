@@ -1,0 +1,30 @@
+<div class="cooking-body-item">
+  <!--          img-->
+  <div class="cooking-body-item-img">
+    <img [src]="cookingItem.imgPath">
+  </div>
+  <!--          menu description-->
+  <div class="cooking-body-item-name">
+    <span>{{ cookingItem.name }}</span>
+  </div>
+  <!--          quantity-->
+  <div class="cooking-body-item-quantity">
+    <span>x{{ quantity }}</span>
+  </div>
+
+  <!--              move to order-->
+  <div class="cooking-body-item-remove">
+    <img src="assets/images/right-squared.png" height="50"
+          (click)="onMoveToOrder()">
+
+  </div>
+
+  <!--              remove-->
+  <div class="cooking-body-item-remove">
+    <img src="assets/images/delete-forever.png"
+         height="50"
+         (click)="onRemove()">
+  </div>
+
+
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {OrderItemsService} from "../../order-items.service";
+import {MenuItem} from "../../shared/menu-item.interface";
 
 @Component({
   selector: 'app-order',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+  orderItems: {menuItem:MenuItem, quantity: number}[] = [];
+
+
+  constructor(private orderItemsService: OrderItemsService) { }
 
   ngOnInit(): void {
+    this.orderItems = this.orderItemsService.orderItems;
+  }
+
+  culcTotalPrice() {
+    let totalPrice = 0;
+    this.orderItems.forEach(item => {
+      totalPrice += item['menuItem'].price * item['quantity'];
+    })
+    return totalPrice;
   }
 
 }

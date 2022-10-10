@@ -10,28 +10,20 @@
   </div>
   <!--          price-->
   <div class="menu-item-price">
-    <span>5$</span>
+    <span>{{ menuItem.price }}$</span>
   </div>
 
   <!--              add and quantity block-->
   <div class="menu-item-add-quantity-block">
     <!--                quantity-->
-    <div class="menu-item-quantity">
-      <div class="menu-item-quantity-decrease">
-        -
-      </div>
-      <div class="menu-item-quantity-number">
-        1
-      </div>
-      <div class="menu-item-quantity-increase">
-        +
-      </div>
-    </div>
+    <app-quantity
+      [quantity]="quantity"
+    (changedQuantity)="onChangeQuantity($event)"></app-quantity>
     <!--          add button-->
-    <div class="menu-item-add">
-      <button class="btn btn-success">Add</button>
+    <div>
+      <button class="btn btn-success"
+      (click)="onAdd()">Add</button>
     </div>
-
   </div>
 
 

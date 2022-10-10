@@ -1,4 +1,4 @@
-.order-body-item {
+.cooking-body-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -7,27 +7,20 @@
   border-radius: 30px;
 }
 
-.order-body-item-name {
+.cooking-body-item-name {
   flex: 1;
   align-self: center;
 }
 
-.order-body-item-quantity {
+.cooking-body-item-quantity {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.order-item-price {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
-
-.order-body-item-remove {
+.cooking-body-item-remove {
   align-self: center;
 }
-.order-body-item-remove:hover {
+.cooking-body-item-remove:hover {
   cursor: pointer;
 }

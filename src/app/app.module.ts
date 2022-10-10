@@ -7,6 +7,9 @@ import { OrderComponent } from './components/order/order.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 import { OrderItemComponent } from './components/order/order-item/order-item.component';
 import { TotalPriceComponent } from './components/order/total-price/total-price.component';
+import { QuantityComponent } from './components/menu/menu-item/quantity/quantity.component';
+import { CookingComponent } from './components/cooking/cooking.component';
+import { CookingItemComponent } from './components/cooking/cooking-item/cooking-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { TotalPriceComponent } from './components/order/total-price/total-price.
     OrderComponent,
     MenuItemComponent,
     OrderItemComponent,
-    TotalPriceComponent
+    TotalPriceComponent,
+    QuantityComponent,
+    CookingComponent,
+    CookingItemComponent
   ],
   imports: [
     BrowserModule

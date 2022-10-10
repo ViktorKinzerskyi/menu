@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
+import { MenuItem } from './shared/menu-item.interface';
 
-export interface MenuItem {
-  imgPath: string,
-  name: string,
-  description: string,
-  price: number
-}
+
 
 @Injectable({
   providedIn: 'root'

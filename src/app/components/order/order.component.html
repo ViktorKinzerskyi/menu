@@ -9,12 +9,18 @@
   <div class="order-body">
     <!--        order-body-->
     <ul >
-      <li>
-        <app-order-item></app-order-item>
+      <li *ngFor="let orderItem of orderItems; index as i ">
+        <app-order-item
+          [orderItem]="orderItem['menuItem']"
+          [quantity]="orderItem['quantity']"
+          [index]="i" >
+        </app-order-item>
       </li>
+
     </ul>
   </div>
 
   <!--      total price-->
-  <app-total-price></app-total-price>
+  <app-total-price
+  [totalPrice]="culcTotalPrice()"></app-total-price>
 </div>
