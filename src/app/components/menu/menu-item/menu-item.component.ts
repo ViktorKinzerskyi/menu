@@ -37,5 +37,6 @@ export class MenuItemComponent implements OnInit {
       quantity: this.quantity
     })
     this.quantity =1;
+    this.cookingItemsService.orderNumber++;
   }
 }

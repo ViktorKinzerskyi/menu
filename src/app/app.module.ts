@@ -11,6 +11,7 @@ import { QuantityComponent } from './components/menu/menu-item/quantity/quantity
 import { CookingComponent } from './components/cooking/cooking.component';
 import { CookingItemComponent } from './components/cooking/cooking-item/cooking-item.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

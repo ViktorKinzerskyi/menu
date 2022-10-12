@@ -6,6 +6,8 @@ import {MenuItem} from "../shared/menu-item.interface";
 })
 export class CookingItemsService {
 
+  orderNumber = 0;
+
   cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
 
   constructor() { }
