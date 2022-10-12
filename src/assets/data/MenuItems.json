@@ -1,0 +1,56 @@
+[
+  {
+    "imgPath": "assets/images/pizza--v1.png",
+    "name": "Pizza",
+    "description": "(Tomatoes, cheese, beacon, olives, olives)",
+    "price": "5"
+  },
+  {
+    "imgPath": "assets/images/rice-bowl.png",
+    "name": "Rice bowl",
+    "description": "(home made noodle, smoked BBQ, green onions, shitake mushrooms, boiled egg)",
+    "price": "9"
+  },
+  {
+    "imgPath": "assets/images/taco.png",
+    "name": "Taco",
+    "description": "(beef, pork, chicken, seafood, beans, vegetables, and cheese)",
+    "price": "7"
+  },
+  {
+    "imgPath": "assets/images/kebab.png",
+    "name": "Kebab",
+    "description": "(bread stuffed with döner meat shavings, lettuce, sliced tomato and onions, with a choice of sauce including sauce blanche, a mayo-yogurt sauce)",
+    "price": "10"
+  },
+  {
+    "imgPath": "assets/images/hamburger.png",
+    "name": "Hamburger",
+    "description": "(Pineapple, onion, tomato, beef, BBQ sauce)",
+    "price": "8"
+  },
+  {
+    "imgPath": "assets/images/pretzel.png",
+    "name": "Pretzel",
+    "description": "(flour, water, yeast, shortening, and sugar)",
+    "price": "8"
+  },
+  {
+    "imgPath": "assets/images/noodles.png",
+    "name": "Noodles",
+    "description": "(wheat flour, water, and salt)",
+    "price": "3"
+  },
+  {
+    "imgPath": "assets/images/porridge.png",
+    "name": "Porridge",
+    "description": "(oats with water or milk)",
+    "price": "3"
+  },
+  {
+    "imgPath": "assets/images/hot-dog.png",
+    "name": "Hot-dog",
+    "description": "(Sausage made from pork)",
+    "price": "5"
+  }
+]

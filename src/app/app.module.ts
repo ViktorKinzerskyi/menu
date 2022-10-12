@@ -10,6 +10,7 @@ import { TotalPriceComponent } from './components/order/total-price/total-price.
 import { QuantityComponent } from './components/menu/menu-item/quantity/quantity.component';
 import { CookingComponent } from './components/cooking/cooking.component';
 import { CookingItemComponent } from './components/cooking/cooking-item/cooking-item.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CookingItemComponent } from './components/cooking/cooking-item/cooking-
     CookingItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

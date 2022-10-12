@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CookingItemsService} from "../../cooking-items.service";
+import {CookingItemsService} from "../../services/cooking-items.service";
 import {MenuItem} from "../../shared/menu-item.interface";
 
 @Component({

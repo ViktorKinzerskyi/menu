@@ -29,5 +29,6 @@
   align-self: center;
 }
 .order-body-item-remove:hover {
+  height: 60px;
   cursor: pointer;
 }

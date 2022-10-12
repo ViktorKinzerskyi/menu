@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItemsService} from "../../menu-items.service";
+import {MenuItemsService} from "../../services/menu-items.service";
 import {MenuItem} from "../../shared/menu-item.interface";
 
 @Component({
@@ -14,7 +14,9 @@ export class MenuComponent implements OnInit {
   constructor(private menuItemsService: MenuItemsService) { }
 
   ngOnInit(): void {
-    this.menuItems = this.menuItemsService.menuItems;
+    this.menuItemsService.fetchPosts().subscribe( menuItems => {
+      this.menuItems = menuItems;
+    });
   }
 
 }
