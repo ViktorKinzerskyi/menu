@@ -11,7 +11,7 @@ export class QuantityComponent implements OnInit {
   changedQuantity = new EventEmitter<number>();
 
   @Input()
-  quantity = 1;
+  quantity:number = 0;
 
   constructor() { }
 
@@ -26,8 +26,10 @@ export class QuantityComponent implements OnInit {
   }
 
   increaseQuantity() {
-    this.quantity++;
-    this.changedQuantity.emit(this.quantity);
+    if (this.quantity < 99) {
+      this.quantity++;
+      this.changedQuantity.emit(this.quantity);
+    }
 
   }
 }

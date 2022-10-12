@@ -21,6 +21,8 @@ export class CookingItemComponent implements OnInit {
   @Input()
   quantity: number = 0;
 
+  orderNumber: string = '';
+
   @Input()
   index: number = 0;
 
@@ -33,6 +35,15 @@ export class CookingItemComponent implements OnInit {
   ngOnInit(): void {
     this.cookingItems = this.cookingItemsService.cookingItems;
     this.orderItems = this.orderItemsService.orderItems;
+    this.format();
+  }
+
+  format() {
+    this.orderNumber = this.padLeft(this.cookingItemsService.orderNumber.toString(), "0", 5);
+  }
+
+  padLeft(text: string, padChar: string, size: number): string {
+    return (String(padChar).repeat(size) + text).substr(size * -1, size);
   }
 
   onMoveToOrder() {
