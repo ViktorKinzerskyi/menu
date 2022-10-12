@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MenuItem} from "../../../shared/menu-item.interface";
-import {OrderItemsService} from "../../../order-items.service";
+import {OrderItemsService} from "../../../services/order-items.service";
 
 @Component({
   selector: 'app-order-item',

@@ -22,5 +22,6 @@
   align-self: center;
 }
 .cooking-body-item-remove:hover {
+  height: 60px;
   cursor: pointer;
 }

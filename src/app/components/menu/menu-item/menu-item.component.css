@@ -7,9 +7,12 @@
   border-radius: 30px;
 }
 
-.menu-item-description {
+.menu-item-name {
   flex: 1;
   padding: 10px;
+}
+.menu-item-description {
+  font-size: smaller;
 }
 
 .menu-item-price {
