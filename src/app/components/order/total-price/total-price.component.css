@@ -1,0 +1,14 @@
+.order-total-price {
+  position: absolute;
+  bottom: 10px;
+  right: 22px;
+  display: flex;
+  border: 3px solid #3D8361;
+  border-radius: 30px;
+}
+
+.order-total-price-text, .order-total-price-sum {
+  padding: 20px;
+}
+
+

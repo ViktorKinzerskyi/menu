@@ -1,0 +1,30 @@
+<!--        menu list item-->
+<div class="menu-item">
+  <!--          img-->
+  <div class="menu-item-img">
+    <img [src]="menuItem.imgPath">
+  </div>
+  <!--          menu description-->
+  <div class="menu-item-description">
+    <span>{{ menuItem.name }}</span><br><span>{{ menuItem.description }}</span>
+  </div>
+  <!--          price-->
+  <div class="menu-item-price">
+    <span>{{ menuItem.price }}$</span>
+  </div>
+
+  <!--              add and quantity block-->
+  <div class="menu-item-add-quantity-block">
+    <!--                quantity-->
+    <app-quantity
+      [quantity]="quantity"
+    (changedQuantity)="onChangeQuantity($event)"></app-quantity>
+    <!--          add button-->
+    <div>
+      <button class="btn btn-success"
+      (click)="onAdd()">Add</button>
+    </div>
+  </div>
+
+
+</div>

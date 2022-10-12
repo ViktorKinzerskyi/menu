@@ -1,0 +1,35 @@
+.order-wrap {
+  height: 100vh;
+}
+
+.order {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 73px;
+}
+
+.order-header {
+  margin: 3px;
+}
+
+.order-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 17px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

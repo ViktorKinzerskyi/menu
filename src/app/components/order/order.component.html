@@ -1,0 +1,26 @@
+<div class="order-wrap order" >
+
+  <!--      order header-->
+  <div class="order-header">
+    <h2 class="text-center text-uppercase text-decoration-underline">order</h2>
+  </div>
+
+  <!--      order body-->
+  <div class="order-body">
+    <!--        order-body-->
+    <ul >
+      <li *ngFor="let orderItem of orderItems; index as i ">
+        <app-order-item
+          [orderItem]="orderItem['menuItem']"
+          [quantity]="orderItem['quantity']"
+          [index]="i" >
+        </app-order-item>
+      </li>
+
+    </ul>
+  </div>
+
+  <!--      total price-->
+  <app-total-price
+  [totalPrice]="culcTotalPrice()"></app-total-price>
+</div>
