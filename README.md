@@ -1,3 +1,8 @@
+# Requirement to run project
+
+- install [node.js](https://nodejs.org/en/)
+- install Anfular by running this command - `npm install -g @angular/cli` (from [Angular site](https://angular.io/guide/setup-local#install-the-angular-cli))
+
 # Menu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
