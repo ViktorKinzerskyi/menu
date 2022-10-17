@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MenuItem} from "../../../shared/menu-item.interface";
+import {MenuItem} from "../../../shared/interfaces/menu-item.interface";
 import {OrderItemsService} from "../../../services/order-items.service";
 
 @Component({
@@ -23,17 +23,17 @@ export class OrderItemComponent implements OnInit {
   @Input()
   index = 0;
 
-  orderItems: {menuItem:MenuItem, quantity: number}[] = [];
-
+  orderPrice () {
+    return this.orderItem.price * this.quantity
+  }
 
   constructor(private orderItemsService: OrderItemsService) { }
 
   ngOnInit(): void {
-    this.orderItems = this.orderItemsService.orderItems;
   }
 
   onRemove() {
-    this.orderItems.splice(this.index,1);
+    this.orderItemsService.removeOrderItem(this.index);
   }
 
 }

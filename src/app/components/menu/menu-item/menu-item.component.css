@@ -11,8 +11,14 @@
   flex: 1;
   padding: 10px;
 }
+
+.menu-item-name-title {
+  font-weight: 700;
+}
+
 .menu-item-description {
-  font-size: smaller;
+  font-size: 12px;
+  font-style: italic;
 }
 
 .menu-item-price {

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MenuItem} from "../../../shared/menu-item.interface";
+import {MenuItem} from "../../../shared/interfaces/menu-item.interface";
 import {CookingItemsService} from "../../../services/cooking-items.service";
 import {OrderItemsService} from "../../../services/order-items.service";
 
@@ -26,39 +26,20 @@ export class CookingItemComponent implements OnInit {
   @Input()
   index: number = 0;
 
-  cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
-  orderItems: {menuItem:MenuItem, quantity: number}[] = [];
-
   constructor(private cookingItemsService: CookingItemsService,
               private orderItemsService: OrderItemsService) { }
 
   ngOnInit(): void {
-    this.cookingItems = this.cookingItemsService.cookingItems;
-    this.orderItems = this.orderItemsService.orderItems;
     this.orderNumber = this.cookingItemsService.orderNumber;
   }
 
   onMoveToOrder() {
-    let itemExist = false;
-    this.cookingItems.splice(this.index,1);
-
-
-    for(let i = 0; i < this.orderItems.length; i++){
-      if(this.orderItems[i]['menuItem'].name == this.cookingItem.name){
-        this.orderItems[i]['quantity'] += this.quantity;
-        itemExist = true;
-        break;
-      }
-    }
-
-    if(!itemExist) {
-      this.orderItems.push({menuItem: this.cookingItem, quantity: this.quantity});
-    }
-
+    this.orderItemsService.addOrderItem(this.cookingItem, this.quantity);
+    this.cookingItemsService.removeCookingItem(this.index);
   }
 
   onRemove() {
-    this.cookingItems.splice(this.index,1);
+    this.cookingItemsService.removeCookingItem(this.index);
   }
 
 }

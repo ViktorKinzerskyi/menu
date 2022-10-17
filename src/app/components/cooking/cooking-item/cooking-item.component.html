@@ -4,14 +4,14 @@
     <img [src]="cookingItem.imgPath">
   </div>
   <!--          menu description-->
-  <div class="cooking-body-item-name">
-    <span style="font-size: smaller;">#{{ orderNumber | orderId:3}}</span>
+  <div class="cooking-body-item-description">
+    <span class="id-order">#{{ orderNumber | orderId: 4}}</span>
     <br>
-    <span>{{ cookingItem.name }}</span>
+    <span class="cooking-body-item-name">{{ cookingItem.name }}</span>
   </div>
   <!--          quantity-->
   <div class="cooking-body-item-quantity">
-    <span>x{{ quantity }}</span>
+    x{{ quantity }}
   </div>
 
   <!--              move to order-->

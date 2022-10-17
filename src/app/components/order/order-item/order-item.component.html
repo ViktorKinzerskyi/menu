@@ -5,7 +5,7 @@
   </div>
   <!--          menu description-->
   <div class="order-body-item-name">
-    <span>{{ orderItem.name }}</span>
+    {{ orderItem.name }}
   </div>
   <!--          quantity-->
   <div class="order-body-item-quantity">
@@ -13,14 +13,14 @@
   </div>
 
   <div class="order-item-price">
-    <span>{{ orderItem.price * quantity }}$</span>
+    {{ orderPrice() }}$  <!--add variable -->
   </div>
 
   <!--              remove-->
   <div class="order-body-item-remove">
     <img src="assets/images/delete-forever.png"
          height="50"
-          (click)="onRemove()">
+         (click)="onRemove()">
   </div>
 
 

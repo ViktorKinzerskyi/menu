@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MenuItem} from "../../../shared/menu-item.interface";
+import {MenuItem} from "../../../shared/interfaces/menu-item.interface";
 import {CookingItemsService} from "../../../services/cooking-items.service";
 
 @Component({
@@ -19,12 +19,9 @@ export class MenuItemComponent implements OnInit {
 
   quantity = 1;
 
-  cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
-
   constructor(private cookingItemsService: CookingItemsService) { }
 
   ngOnInit(): void {
-    this.cookingItems = this.cookingItemsService.cookingItems;
   }
 
   onChangeQuantity(quantity: number) {
@@ -32,11 +29,7 @@ export class MenuItemComponent implements OnInit {
   }
 
   onAdd() {
-    this.cookingItems.push({
-      menuItem: this.menuItem,
-      quantity: this.quantity
-    })
-    this.quantity =1;
-    this.cookingItemsService.orderNumber++;
+    this.cookingItemsService.addCookingItem(this.menuItem, this.quantity)
+    this.quantity = 1;
   }
 }

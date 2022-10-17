@@ -1,4 +1,4 @@
-<div class="order-wrap order" >
+<div class="order" >
 
   <!--      order header-->
   <div class="order-header">
@@ -11,8 +11,8 @@
     <ul >
       <li *ngFor="let orderItem of orderItems; index as i ">
         <app-order-item
-          [orderItem]="orderItem['menuItem']"
-          [quantity]="orderItem['quantity']"
+          [orderItem]="orderItem.menuItem"
+          [quantity]="orderItem.quantity"
           [index]="i" >
         </app-order-item>
       </li>
@@ -21,6 +21,5 @@
   </div>
 
   <!--      total price-->
-  <app-total-price
-  [totalPrice]="culcTotalPrice()"></app-total-price>
+  <app-total-price [totalPrice]="calcTotalPrice()"></app-total-price>
 </div>

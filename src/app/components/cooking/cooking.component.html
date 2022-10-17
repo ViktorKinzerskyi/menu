@@ -1,4 +1,4 @@
-<div class="cooking-wrap cooking">
+<div class="cooking">
   <div class="cooking-header">
     <h2 class="text-center text-uppercase text-decoration-underline">Cooking</h2>
   </div>
@@ -9,8 +9,8 @@
       <!--        cooking list item-->
       <li *ngFor="let cookingItem of cookingItems; index as i ">
         <app-cooking-item
-          [cookingItem]="cookingItem['menuItem']"
-          [quantity]="cookingItem['quantity']"
+          [cookingItem]="cookingItem.menuItem"
+          [quantity]="cookingItem.quantity"
           [index]="i" >
         </app-cooking-item>
       </li>
