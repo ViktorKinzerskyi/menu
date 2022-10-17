@@ -12,6 +12,7 @@ import { CookingComponent } from './components/cooking/cooking.component';
 import { CookingItemComponent } from './components/cooking/cooking-item/cooking-item.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { OrderIdPipe } from './pipes/order-id.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from "@angular/forms";
     TotalPriceComponent,
     QuantityComponent,
     CookingComponent,
-    CookingItemComponent
+    CookingItemComponent,
+    OrderIdPipe
   ],
   imports: [
     BrowserModule,
