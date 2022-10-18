@@ -6,11 +6,13 @@
   </div>
   <!--          menu description-->
   <div class="menu-item-name">
-    <span>{{ menuItem.name }}</span><br><span class="menu-item-description">{{ menuItem.description }}</span>
+    <span class="menu-item-name-title">{{ menuItem.name }}</span>
+    <br>
+    <span class="menu-item-description">{{ menuItem.description }}</span>
   </div>
   <!--          price-->
   <div class="menu-item-price">
-    <span>{{ menuItem.price }}$</span>
+    {{ menuItem.price }}$
   </div>
 
   <!--              add and quantity block-->
@@ -18,7 +20,7 @@
     <!--                quantity-->
     <app-quantity
       [quantity]="quantity"
-    (changedQuantity)="onChangeQuantity($event)"></app-quantity>
+      (changedQuantity)="onChangeQuantity($event)"></app-quantity>
     <!--          add button-->
     <div>
       <button class="btn btn-success"

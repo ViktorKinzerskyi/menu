@@ -7,7 +7,7 @@
   border-radius: 30px;
 }
 
-.cooking-body-item-name {
+.cooking-body-item-description {
   flex: 1;
   align-self: center;
 }
@@ -22,6 +22,14 @@
   align-self: center;
 }
 .cooking-body-item-remove:hover {
-  height: 60px;
   cursor: pointer;
+  height: 60px;
+}
+
+.id-order {
+  font-size: 12px;
+}
+
+.cooking-body-item-name {
+  font-weight: 700;
 }

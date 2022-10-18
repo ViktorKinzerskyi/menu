@@ -1,8 +1,5 @@
-.order-wrap {
-  height: 100vh;
-}
-
 .order {
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,6 +8,8 @@
 
 .order-header {
   margin: 3px;
+  color: #1C6758;
+  font-weight: 700;
 }
 
 .order-body {

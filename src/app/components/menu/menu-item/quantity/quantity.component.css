@@ -19,8 +19,8 @@
 }
 
 .menu-item-quantity-decrease:hover {
-  background-color: #967E76;
   cursor: pointer;
+  background-color: #967E76;
 }
 
 .menu-item-quantity-number {
@@ -36,6 +36,6 @@
 }
 
 .menu-item-quantity-increase:hover {
-  background-color: #967E76;
   cursor: pointer;
+  background-color: #967E76;
 }

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {OrderItemsService} from "../../services/order-items.service";
-import {MenuItem} from "../../shared/menu-item.interface";
+import {MenuItem} from "../../shared/interfaces/menu-item.interface";
 
 @Component({
   selector: 'app-order',
@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
     this.orderItems = this.orderItemsService.orderItems;
   }
 
-  culcTotalPrice() {
+  calcTotalPrice() {
     let totalPrice = 0;
     this.orderItems.forEach(item => {
       totalPrice += item['menuItem'].price * item['quantity'];

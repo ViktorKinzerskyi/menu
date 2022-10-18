@@ -1,7 +1,5 @@
-.cooking-wrap {
-  height: 100vh;
-}
 .cooking {
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,4 +13,6 @@
 
 .cooking-header {
   margin: 3px;
+  color: #1C6758;
+  font-weight: 700;
 }
