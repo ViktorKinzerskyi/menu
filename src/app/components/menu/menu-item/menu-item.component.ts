@@ -10,25 +10,25 @@ import {CookingItemsService} from "../../../services/cooking-items.service";
 export class MenuItemComponent implements OnInit {
 
   @Input()
-  menuItem: MenuItem = {
+  public menuItem: MenuItem = {
     imgPath: '',
     name: '',
     description: '',
     price: 0
   };
 
-  quantity = 1;
+  public quantity = 1;
 
   constructor(private cookingItemsService: CookingItemsService) { }
 
   ngOnInit(): void {
   }
 
-  onChangeQuantity(quantity: number) {
+  public onChangeQuantity(quantity: number): void {
     this.quantity = quantity;
   }
 
-  onAdd() {
+  public onAdd(): void {
     this.cookingItemsService.addCookingItem(this.menuItem, this.quantity)
     this.quantity = 1;
   }

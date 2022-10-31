@@ -9,7 +9,7 @@ import {MenuItem} from "../../shared/interfaces/menu-item.interface";
 })
 export class CookingComponent implements OnInit {
 
-  cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
+  public cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
 
   constructor(private cookingItemsService: CookingItemsService) { }
 

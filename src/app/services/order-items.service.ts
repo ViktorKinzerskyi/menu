@@ -6,11 +6,11 @@ import {MenuItem} from "../shared/interfaces/menu-item.interface";
 })
 export class OrderItemsService {
 
-  orderItems: {menuItem:MenuItem, quantity: number}[] = [];
+  public orderItems: {menuItem:MenuItem, quantity: number}[] = [];
 
   constructor() { }
 
-  addOrderItem(oderItem:MenuItem, quantity: number) {
+  public addOrderItem(oderItem:MenuItem, quantity: number): void {
     let itemExist = false;
 
     for(let i = 0; i < this.orderItems.length; i++){
@@ -26,7 +26,7 @@ export class OrderItemsService {
     }
   }
 
-  removeOrderItem(index: number) {
+  public removeOrderItem(index: number): void {
     this.orderItems.splice(index,1);
   }
 }

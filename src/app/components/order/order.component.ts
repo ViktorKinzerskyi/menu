@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {OrderItemsService} from "../../services/order-items.service";
 import {MenuItem} from "../../shared/interfaces/menu-item.interface";
 
@@ -9,7 +9,7 @@ import {MenuItem} from "../../shared/interfaces/menu-item.interface";
 })
 export class OrderComponent implements OnInit {
 
-  orderItems: {menuItem:MenuItem, quantity: number}[] = [];
+  public orderItems: {menuItem:MenuItem, quantity: number}[] = [];
 
 
   constructor(private orderItemsService: OrderItemsService) { }
@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
     this.orderItems = this.orderItemsService.orderItems;
   }
 
-  calcTotalPrice() {
+  public calcTotalPrice(): number {
     let totalPrice = 0;
     this.orderItems.forEach(item => {
       totalPrice += item['menuItem'].price * item['quantity'];

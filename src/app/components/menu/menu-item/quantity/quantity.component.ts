@@ -8,24 +8,24 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class QuantityComponent implements OnInit {
 
   @Output()
-  changedQuantity = new EventEmitter<number>();
+  public changedQuantity = new EventEmitter<number>();
 
   @Input()
-  quantity:number = 0;
+  public quantity:number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  decreaseQuantity() {
+  public decreaseQuantity(): void {
     if (this.quantity > 1){
       this.quantity--;
       this.changedQuantity.emit(this.quantity);
     }
   }
 
-  increaseQuantity() {
+  public increaseQuantity(): void {
     if (this.quantity < 99) {
       this.quantity++;
       this.changedQuantity.emit(this.quantity);

@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TotalPriceComponent implements OnInit {
 
   @Input()
-  totalPrice = 0;
+  public totalPrice = 0;
 
   constructor() { }
 
