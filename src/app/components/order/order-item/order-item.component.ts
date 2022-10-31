@@ -10,7 +10,7 @@ import {OrderItemsService} from "../../../services/order-items.service";
 export class OrderItemComponent implements OnInit {
 
   @Input()
-  orderItem: MenuItem = {
+  public orderItem: MenuItem = {
     imgPath: '',
     name: '',
     description: '',
@@ -18,12 +18,12 @@ export class OrderItemComponent implements OnInit {
   };
 
   @Input()
-  quantity: number = 0;
+  public quantity: number = 0;
 
   @Input()
-  index = 0;
+  public index = 0;
 
-  orderPrice () {
+  public orderPrice (): number {
     return this.orderItem.price * this.quantity
   }
 
@@ -32,7 +32,7 @@ export class OrderItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRemove() {
+  public onRemove(): void {
     this.orderItemsService.removeOrderItem(this.index);
   }
 

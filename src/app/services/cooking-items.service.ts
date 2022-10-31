@@ -6,13 +6,13 @@ import {MenuItem} from "../shared/interfaces/menu-item.interface";
 })
 export class CookingItemsService {
 
-  orderNumber = 0;
+  public orderNumber = 0;
 
-  cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
+  public cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
 
   constructor() { }
 
-  addCookingItem(menuItem: MenuItem, quantity: number) {
+  public addCookingItem(menuItem: MenuItem, quantity: number): void {
     this.cookingItems.push({
       menuItem: menuItem,
       quantity: quantity
@@ -20,11 +20,11 @@ export class CookingItemsService {
     this.increaseOrderItem();
   }
 
-  removeCookingItem(index: number) {
+  public removeCookingItem(index: number): void {
     this.cookingItems.splice(index,1);
   }
 
-  increaseOrderItem(){
+  public increaseOrderItem(): void{
     this.orderNumber++
   }
 

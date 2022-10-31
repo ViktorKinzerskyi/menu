@@ -1,4 +1,4 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import { MenuItem } from '../shared/interfaces/menu-item.interface';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -12,7 +12,7 @@ export class MenuItemsService{
 
   constructor(private http: HttpClient) { }
 
-  fetchPosts (){
+  public fetchPosts (): Observable<MenuItem[]>{
      return this.http.get<MenuItem[]>('assets/db/MenuItems.json')
   }
 }
