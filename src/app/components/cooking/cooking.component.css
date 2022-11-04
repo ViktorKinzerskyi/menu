@@ -16,3 +16,17 @@
   color: #1C6758;
   font-weight: 700;
 }
+
+.cooking-body-item-quantity {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.cooking-body-item-remove {
+  align-self: center;
+}
+.cooking-body-item-remove:hover {
+  cursor: pointer;
+  height: 60px;
+}

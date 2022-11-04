@@ -1,25 +1,42 @@
 <div class="order" >
-
   <!--      order header-->
   <div class="order-header">
     <h2 class="text-center text-uppercase text-decoration-underline">order</h2>
   </div>
-
   <!--      order body-->
   <div class="order-body">
     <!--        order-body-->
     <ul >
       <li *ngFor="let orderItem of orderItems; index as i ">
-        <app-order-item
-          [orderItem]="orderItem.menuItem"
-          [quantity]="orderItem.quantity"
-          [index]="i" >
-        </app-order-item>
+        <app-menu-item
+        [menuItem]="orderItem.menuItem"
+        [order]="orderItem.quantity">
+          <!--          quantity-->
+          <div class="order-body-item-quantity">
+           x{{ orderItem.quantity }}
+          </div>
+          <div class="order-item-price">
+            {{ orderPrice(orderItem.menuItem.price, orderItem.quantity) }}$  <!--add variable -->
+          </div>
+          <!--              remove-->
+          <div class="order-body-item-remove">
+            <img src="assets/images/delete-forever.png"
+                 height="50"
+                 (click)="onRemove(i)">
+          </div>
+        </app-menu-item>
       </li>
-
     </ul>
   </div>
-
   <!--      total price-->
-  <app-total-price [totalPrice]="calcTotalPrice()"></app-total-price>
+  <div class="order-total-price">
+    <!--        text-->
+    <div class="order-total-price-text">
+      Total price:
+    </div>
+    <!--        price-->
+    <div class="order-total-price-sum">
+      <span>{{ calcTotalPrice() }}$</span>
+    </div>
+  </div>
 </div>

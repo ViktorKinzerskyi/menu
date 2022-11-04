@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {CookingItemsService} from "../../services/cooking-items.service";
-import {MenuItem} from "../../shared/interfaces/menu-item.interface";
+import { Component, OnInit } from '@angular/core'
+import { CookingItemsService } from '../../shared/services/cooking-items.service'
+import { CookingItem } from '../../shared/interfaces/cooking-item.interface'
+import { OrderItemsService } from '../../shared/services/order-items.service'
 
 @Component({
   selector: 'app-cooking',
@@ -8,13 +9,23 @@ import {MenuItem} from "../../shared/interfaces/menu-item.interface";
   styleUrls: ['./cooking.component.css']
 })
 export class CookingComponent implements OnInit {
+  public cookingItems: CookingItem[] = []
 
-  public cookingItems: {menuItem:MenuItem, quantity: number}[] = [];
+  public constructor (
+    private readonly cookingItemsService: CookingItemsService,
+    private readonly orderItemsService: OrderItemsService
+  ) { }
 
-  constructor(private cookingItemsService: CookingItemsService) { }
-
-  ngOnInit(): void {
-    this.cookingItems = this.cookingItemsService.cookingItems;
+  public ngOnInit (): void {
+    this.cookingItems = this.cookingItemsService.cookingItems
   }
 
+  public moveToOrder (index: number): void {
+    this.orderItemsService.addOrderItem(this.cookingItems[index])
+    this.cookingItemsService.removeCookingItem(index)
+  }
+
+  public removeToOrder (index: number): void {
+    this.cookingItemsService.removeCookingItem(index)
+  }
 }

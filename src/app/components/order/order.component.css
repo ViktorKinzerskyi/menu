@@ -19,6 +19,39 @@
   margin-bottom: 10px;
 }
 
+.order-item-price {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.order-body-item-remove {
+  align-self: center;
+}
+.order-body-item-remove:hover {
+  height: 60px;
+  cursor: pointer;
+}
+
+.order-body-item-quantity {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.order-total-price-text, .order-total-price-sum {
+  padding: 20px;
+}
+
+.order-total-price {
+  position: absolute;
+  bottom: 10px;
+  right: 22px;
+  display: flex;
+  border: 3px solid #3D8361;
+  border-radius: 30px;
+}
+
 
 
 

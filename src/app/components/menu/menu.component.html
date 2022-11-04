@@ -2,7 +2,6 @@
 <div class="menu-header">
     <h2 class="text-center text-uppercase text-decoration-underline">Menu</h2>
   </div>
-
   <!--  menu list-->
   <div class="menu-body">
     <ul >
@@ -10,6 +9,17 @@
       <li *ngFor="let menuItem of menuItems">
         <app-menu-item
           [menuItem]="menuItem">
+          <div class="menu-item-add-quantity-block">
+            <!--                quantity-->
+            <app-quantity
+              [quantity]="quantity"
+              (changedQuantity)="onChangeQuantity($event)"></app-quantity>
+            <!--          add button-->
+            <div>
+              <button class="btn btn-success"
+                      (click)="onAdd(menuItem)">Add</button>
+            </div>
+          </div>
         </app-menu-item>
       </li>
     </ul>

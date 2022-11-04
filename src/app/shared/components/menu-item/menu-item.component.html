@@ -1,0 +1,23 @@
+<div class="menu-item">
+  <!--          img-->
+  <div class="menu-item-img">
+    <img [src]="menuItem.imgPath">
+  </div>
+  <!--          menu description-->
+  <div [ngClass]="orderId || order ? 'cooking-body-item-description' : 'menu-item-name'" class="menu-item-name">
+    <div *ngIf="orderId">
+      <span class="id-order">#{{ orderId | orderId: 4}}</span>
+      <br>
+    </div>
+    <span class="menu-item-name-title">{{ menuItem.name }}</span>
+    <div *ngIf="!orderId && !order">
+      <br>
+      <span class="menu-item-description">{{ menuItem.description }}</span>
+    </div>
+  </div>
+  <!--          price-->
+  <div *ngIf="!orderId && !order" class="menu-item-price">
+    {{ menuItem.price }}$
+  </div>
+  <ng-content></ng-content>
+</div>

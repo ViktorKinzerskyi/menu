@@ -2,17 +2,30 @@
   <div class="cooking-header">
     <h2 class="text-center text-uppercase text-decoration-underline">Cooking</h2>
   </div>
-
   <!--  cooking list-->
   <div class="cooking-body">
     <ul >
       <!--        cooking list item-->
       <li *ngFor="let cookingItem of cookingItems; index as i ">
-        <app-cooking-item
-          [cookingItem]="cookingItem.menuItem"
-          [quantity]="cookingItem.quantity"
-          [index]="i" >
-        </app-cooking-item>
+        <app-menu-item
+        [menuItem]="cookingItem.menuItem"
+        [orderId]="cookingItem.orderId">
+          <!--          quantity-->
+          <div class="cooking-body-item-quantity">
+            x{{ cookingItem.quantity }}
+          </div>
+          <!--              move to order-->
+          <div class="cooking-body-item-remove">
+            <img src="assets/images/right-squared.png" height="50"
+                 (click)="moveToOrder(i)">
+          </div>
+          <!--              remove-->
+          <div class="cooking-body-item-remove">
+            <img src="assets/images/delete-forever.png"
+                 height="50"
+                 (click)="removeToOrder(i)">
+          </div>
+        </app-menu-item>
       </li>
     </ul>
   </div>

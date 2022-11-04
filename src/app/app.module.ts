@@ -1,18 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { OrderComponent } from './components/order/order.component';
-import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
-import { OrderItemComponent } from './components/order/order-item/order-item.component';
-import { TotalPriceComponent } from './components/order/total-price/total-price.component';
-import { QuantityComponent } from './components/menu/menu-item/quantity/quantity.component';
-import { CookingComponent } from './components/cooking/cooking.component';
-import { CookingItemComponent } from './components/cooking/cooking-item/cooking-item.component';
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import { OrderIdPipe } from './pipes/order-id.pipe';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './app.component'
+import { MenuComponent } from './components/menu/menu.component'
+import { OrderComponent } from './components/order/order.component'
+import { MenuItemComponent } from './shared/components/menu-item/menu-item.component'
+import { QuantityComponent } from './shared/components/quantity/quantity.component'
+import { CookingComponent } from './components/cooking/cooking.component'
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
+import { OrderIdPipe } from './shared/pipes/order-id.pipe'
 
 @NgModule({
   declarations: [
@@ -20,11 +16,8 @@ import { OrderIdPipe } from './pipes/order-id.pipe';
     MenuComponent,
     OrderComponent,
     MenuItemComponent,
-    OrderItemComponent,
-    TotalPriceComponent,
     QuantityComponent,
     CookingComponent,
-    CookingItemComponent,
     OrderIdPipe
   ],
   imports: [

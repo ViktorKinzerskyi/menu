@@ -1,4 +1,4 @@
-.order-body-item {
+.menu-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -7,29 +7,36 @@
   border-radius: 30px;
 }
 
-.order-body-item-name {
+.menu-item-name {
   flex: 1;
-  align-self: center;
+  padding: 10px;
+}
+
+.menu-item-name-title {
   font-weight: 700;
 }
 
-.order-body-item-quantity {
+.menu-item-description {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.menu-item-price {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.order-item-price {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.id-order {
+  font-size: 12px;
 }
 
-
-.order-body-item-remove {
+.cooking-body-item-description {
+  flex: 1;
   align-self: center;
 }
-.order-body-item-remove:hover {
-  height: 60px;
-  cursor: pointer;
-}
+
+
+
+
+

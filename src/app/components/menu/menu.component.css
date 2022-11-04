@@ -18,3 +18,10 @@
   font-weight: 700;
 }
 
+.menu-item-add-quantity-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
