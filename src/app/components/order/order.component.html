@@ -10,7 +10,7 @@
       <li *ngFor="let orderItem of orderItems; index as i ">
         <app-menu-item
         [menuItem]="orderItem.menuItem"
-        [order]="orderItem.quantity">
+        [orderItemQuantity]="orderItem.quantity">
           <!--          quantity-->
           <div class="order-body-item-quantity">
            x{{ orderItem.quantity }}

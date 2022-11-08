@@ -16,12 +16,21 @@ export class MenuItemComponent {
   }
 
   @Input() public orderId = 0
-  @Input() public order = 0
-  // @Input() public quantity = 0
-  //
-  // @Output() public changedQuantity = new EventEmitter<number>()
-  //
-  // public onChangeQuantity (changedQuantity: number): void {
-  //   this.changedQuantity.emit(changedQuantity)
-  // }
+  @Input() public orderItemQuantity = 0
+
+  @Output() public changedQuantity = new EventEmitter<number>()
+  @Output() public addMenuItem = new EventEmitter<any>()
+
+  @Input() public defaultQuantity = 1
+
+  public onChangeQuantity (changedQuantity: number): void {
+    this.changedQuantity.emit(changedQuantity)
+  }
+
+  public onAdd (): void {
+    this.defaultQuantity = 1
+
+    this.addMenuItem.emit()
+    // console.log(this.defaultQuantity)
+  }
 }

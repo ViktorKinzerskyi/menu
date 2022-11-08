@@ -11,7 +11,6 @@ import { CookingItemsService } from '../../shared/services/cooking-items.service
 })
 export class MenuComponent implements OnInit, OnDestroy {
   public menuItems: MenuItem[] = []
-  // public defaultQuantity = 0
   public quantity = 1
   private subscription: Subscription = new Subscription()
 
@@ -29,13 +28,12 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe()
   }
 
-  public onChangeQuantity (quantity: number): void {
+  public onChangedQuantity (quantity: number): void {
     this.quantity = quantity
   }
 
   public onAdd (menuItem: MenuItem): void {
     this.cookingItemsService.addCookingItem(menuItem, this.quantity)
-    // this.defaultQuantity = 1
     this.quantity = 1
   }
 }

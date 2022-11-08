@@ -8,18 +8,10 @@
       <!--        menu list item-->
       <li *ngFor="let menuItem of menuItems">
         <app-menu-item
-          [menuItem]="menuItem">
-          <div class="menu-item-add-quantity-block">
-            <!--                quantity-->
-            <app-quantity
-              [quantity]="quantity"
-              (changedQuantity)="onChangeQuantity($event)"></app-quantity>
-            <!--          add button-->
-            <div>
-              <button class="btn btn-success"
-                      (click)="onAdd(menuItem)">Add</button>
-            </div>
-          </div>
+          [menuItem]="menuItem"
+          (changedQuantity)="onChangedQuantity($event)"
+          (addMenuItem)="onAdd(menuItem)"
+        [defaultQuantity]="quantity">
         </app-menu-item>
       </li>
     </ul>

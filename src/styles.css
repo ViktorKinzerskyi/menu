@@ -65,4 +65,24 @@ h2 {
   background-color: #D6CDA4;
 }
 
+.cooking, .menu {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.cooking-body, .menu-body {
+  overflow-y: auto;
+  padding-right: 17px;
+}
+
+.cooking-header, .menu-header {
+  margin: 3px;
+  color: #1C6758;
+  font-weight: 700;
+}
+
+
 
