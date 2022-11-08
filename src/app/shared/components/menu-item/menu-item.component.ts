@@ -1,6 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core'
-import { MenuItem } from '../../interfaces/menu-item.interface'
-import { CookingItemsService } from '../../services/cooking-items.service'
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MenuItem } from '../../interfaces/menu-item.interface';
 
 @Component({
   selector: 'app-menu-item',
@@ -13,24 +12,21 @@ export class MenuItemComponent {
     name: '',
     description: '',
     price: 0
-  }
+  };
 
-  @Input() public orderId = 0
-  @Input() public orderItemQuantity = 0
+  @Input() public orderId = 0;
+  @Input() public orderItemQuantity = 0;
 
-  @Output() public changedQuantity = new EventEmitter<number>()
-  @Output() public addMenuItem = new EventEmitter<any>()
+  @Output() public changedQuantity = new EventEmitter<number>();
 
-  @Input() public defaultQuantity = 1
+  quantity = 1;
 
   public onChangeQuantity (changedQuantity: number): void {
-    this.changedQuantity.emit(changedQuantity)
+    this.quantity = changedQuantity;
   }
 
   public onAdd (): void {
-    this.defaultQuantity = 1
-
-    this.addMenuItem.emit()
-    // console.log(this.defaultQuantity)
+    this.changedQuantity.emit(this.quantity);
+    this.quantity = 1;
   }
 }

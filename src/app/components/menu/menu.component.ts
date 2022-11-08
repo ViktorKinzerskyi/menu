@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core'
-import { MenuItemsService } from '../../shared/services/menu-items.service'
-import { MenuItem } from '../../shared/interfaces/menu-item.interface'
-import { Subscription } from 'rxjs'
-import { CookingItemsService } from '../../shared/services/cooking-items.service'
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MenuItemsService } from '../../shared/services/menu-items.service';
+import { MenuItem } from '../../shared/interfaces/menu-item.interface';
+import { Subscription } from 'rxjs';
+import { CookingItemsService } from '../../shared/services/cooking-items.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,9 +10,8 @@ import { CookingItemsService } from '../../shared/services/cooking-items.service
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit, OnDestroy {
-  public menuItems: MenuItem[] = []
-  public quantity = 1
-  private subscription: Subscription = new Subscription()
+  public menuItems: MenuItem[] = [];
+  private subscription: Subscription = new Subscription();
 
   public constructor (
     private readonly menuItemsService: MenuItemsService,
@@ -20,20 +19,15 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   public ngOnInit (): void {
     this.subscription = this.menuItemsService.fetchPosts().subscribe(menuItems => {
-      this.menuItems = menuItems
+      this.menuItems = menuItems;
     })
   }
 
   public ngOnDestroy (): void {
-    this.subscription.unsubscribe()
+    this.subscription.unsubscribe();
   }
 
-  public onChangedQuantity (quantity: number): void {
-    this.quantity = quantity
-  }
-
-  public onAdd (menuItem: MenuItem): void {
-    this.cookingItemsService.addCookingItem(menuItem, this.quantity)
-    this.quantity = 1
+  public onAdd (menuItem: MenuItem, quantity: number): void {
+    this.cookingItemsService.addCookingItem(menuItem, quantity);
   }
 }

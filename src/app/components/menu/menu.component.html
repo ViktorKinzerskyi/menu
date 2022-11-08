@@ -9,9 +9,7 @@
       <li *ngFor="let menuItem of menuItems">
         <app-menu-item
           [menuItem]="menuItem"
-          (changedQuantity)="onChangedQuantity($event)"
-          (addMenuItem)="onAdd(menuItem)"
-        [defaultQuantity]="quantity">
+          (changedQuantity)="onAdd(menuItem, $event)">
         </app-menu-item>
       </li>
     </ul>

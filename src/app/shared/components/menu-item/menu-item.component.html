@@ -1,6 +1,6 @@
 <div class="menu-item">
   <!--          img-->
-  <div class="menu-item-img">
+  <div>
     <img [src]="menuItem.imgPath">
   </div>
   <!--          menu description-->
@@ -22,7 +22,7 @@
     <div class="menu-item-add-quantity-block">
 <!--                      quantity-->
       <app-quantity
-        [quantity]="defaultQuantity"
+        [quantity]="quantity"
         (changedQuantity)="onChangeQuantity($event)">
       </app-quantity>
 <!--                add button-->
@@ -32,8 +32,5 @@
       </div>
     </div>
   </div>
-
     <ng-content></ng-content>
-
-
 </div>
